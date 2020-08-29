@@ -1,0 +1,36 @@
+{
+    "name": "ekvedaras/php-enum",
+    "description": "PHP enum implementation",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ernestas Kvedaras",
+            "email": "kvedaras.ernestas@gmail.com",
+            "homepage": "https://github.com/ekvedaras",
+            "role": "author"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "EKvedaras\\PHPEnum\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "illuminate/collections": "8.x-dev",
+        "phpunit/phpunit": "^8.5.8"
+    },
+    "suggest": {
+        "illuminate/collections": "8.x-dev"
+    }
+}
