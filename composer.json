@@ -27,10 +27,11 @@
         "ext-json": "*"
     },
     "require-dev": {
-        "illuminate/collections": "8.x-dev",
+        "illuminate/support": "6.*",
         "phpunit/phpunit": "^8.5.8"
     },
     "suggest": {
-        "illuminate/collections": "8.x-dev"
+        "illuminate/collections": "*",
+        "illuminate/support": "*"
     }
 }
