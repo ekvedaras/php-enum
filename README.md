@@ -394,3 +394,9 @@ class Payment
 
 * Laravel package to integrate this with automated casting in model values
 * More implementations of collections in other frameworks
+
+## Changelog
+
+See changes in changelog files:
+
+* [v1 changelog](CHANGELOG-1.x.md)
