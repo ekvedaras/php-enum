@@ -1,12 +1,15 @@
 <?php
 
-namespace EKvedaras\PHPEnum;
+namespace EKvedaras\PHPEnum\PHPArray;
+
+use EKvedaras\PHPEnum\BaseEnum;
+use EKvedaras\PHPEnum\Storage\ArrayAccessibleStorage;
 
 /**
- * Class ArrayEnum
- * @package EKvedaras\PHPEnum
+ * Class Enum
+ * @package EKvedaras\PHPEnum\PHPArray
  */
-abstract class ArrayEnum extends Enum
+abstract class Enum extends BaseEnum
 {
     use ArrayAccessibleStorage;
 

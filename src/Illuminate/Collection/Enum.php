@@ -1,15 +1,17 @@
 <?php
 
-namespace EKvedaras\PHPEnum;
+namespace EKvedaras\PHPEnum\Illuminate\Collection;
 
+use EKvedaras\PHPEnum\BaseEnum;
+use EKvedaras\PHPEnum\Storage\ArrayAccessibleStorage;
 use Illuminate\Support\Collection;
 
 /**
- * Class IlluminateCollectionEnum
- * @package EKvedaras\PHPEnum
+ * Class Enum
+ * @package EKvedaras\PHPEnum\Illuminate\Collection
  * @method static Collection|static[] enum()
  */
-abstract class IlluminateCollectionEnum extends Enum
+abstract class Enum extends BaseEnum
 {
     use ArrayAccessibleStorage;
 

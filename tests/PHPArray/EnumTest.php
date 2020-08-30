@@ -1,15 +1,15 @@
 <?php
 
-namespace Tests;
+namespace Tests\PHPArray;
 
 use PHPUnit\Framework\TestCase;
 use Tests\Enums\PaymentStatusArrayEnum;
 
 /**
- * Class ArrayEnumTest
- * @package Tests
+ * Class EnumTest
+ * @package Tests\PHPArray
  */
-class ArrayEnumTest extends TestCase
+class EnumTest extends TestCase
 {
     /** @test */
     public function it_returns_array_storage()

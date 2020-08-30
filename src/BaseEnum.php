@@ -12,7 +12,7 @@ use RuntimeException;
  * Class EnumArray
  * @package EKvedaras\PHPEnum
  */
-abstract class Enum implements JsonSerializable
+abstract class BaseEnum implements JsonSerializable
 {
     /** @var iterable|iterable[] */
     public static $cache;

@@ -2,7 +2,7 @@
 
 namespace Tests\Enums;
 
-use Tests\EnumTest;
+use Tests\BaseEnumTest;
 
 /**
  * Trait PaymentStatusOptions
@@ -16,9 +16,9 @@ trait PaymentStatusOptions
     final public static function pending(): self
     {
         return static::get(
-            EnumTest::PAYMENT_STATUS_IDS[EnumTest::PAYMENT_STATUS_PENDING],
-            EnumTest::PAYMENT_STATUS_NAMES[EnumTest::PAYMENT_STATUS_PENDING],
-            EnumTest::PAYMENT_STATUS_META[EnumTest::PAYMENT_STATUS_PENDING]
+            BaseEnumTest::PAYMENT_STATUS_IDS[BaseEnumTest::PAYMENT_STATUS_PENDING],
+            BaseEnumTest::PAYMENT_STATUS_NAMES[BaseEnumTest::PAYMENT_STATUS_PENDING],
+            BaseEnumTest::PAYMENT_STATUS_META[BaseEnumTest::PAYMENT_STATUS_PENDING]
         );
     }
 
@@ -28,9 +28,9 @@ trait PaymentStatusOptions
     final public static function completed(): self
     {
         return static::get(
-            EnumTest::PAYMENT_STATUS_IDS[EnumTest::PAYMENT_STATUS_COMPLETED],
-            EnumTest::PAYMENT_STATUS_NAMES[EnumTest::PAYMENT_STATUS_COMPLETED],
-            EnumTest::PAYMENT_STATUS_META[EnumTest::PAYMENT_STATUS_COMPLETED]
+            BaseEnumTest::PAYMENT_STATUS_IDS[BaseEnumTest::PAYMENT_STATUS_COMPLETED],
+            BaseEnumTest::PAYMENT_STATUS_NAMES[BaseEnumTest::PAYMENT_STATUS_COMPLETED],
+            BaseEnumTest::PAYMENT_STATUS_META[BaseEnumTest::PAYMENT_STATUS_COMPLETED]
         );
     }
 
@@ -40,9 +40,9 @@ trait PaymentStatusOptions
     final public static function failed(): self
     {
         return static::get(
-            EnumTest::PAYMENT_STATUS_IDS[EnumTest::PAYMENT_STATUS_FAILED],
-            EnumTest::PAYMENT_STATUS_NAMES[EnumTest::PAYMENT_STATUS_FAILED],
-            EnumTest::PAYMENT_STATUS_META[EnumTest::PAYMENT_STATUS_FAILED]
+            BaseEnumTest::PAYMENT_STATUS_IDS[BaseEnumTest::PAYMENT_STATUS_FAILED],
+            BaseEnumTest::PAYMENT_STATUS_NAMES[BaseEnumTest::PAYMENT_STATUS_FAILED],
+            BaseEnumTest::PAYMENT_STATUS_META[BaseEnumTest::PAYMENT_STATUS_FAILED]
         );
     }
 

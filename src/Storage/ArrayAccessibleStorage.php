@@ -1,6 +1,6 @@
 <?php
 
-namespace EKvedaras\PHPEnum;
+namespace EKvedaras\PHPEnum\Storage;
 
 /**
  * Trait ArrayAccessibleStorage

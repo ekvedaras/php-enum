@@ -1,16 +1,17 @@
 <?php
 
-namespace Tests;
+namespace Tests\Illuminate\Collection;
 
 use Illuminate\Support\Collection;
 use PHPUnit\Framework\TestCase;
+use Tests\BaseEnumTest;
 use Tests\Enums\PaymentStatusIlluminateCollectionEnum;
 
 /**
- * Class IlluminateCollectionEnumTest
- * @package Tests
+ * Class EnumTest
+ * @package Tests\Illuminate\Collection
  */
-class IlluminateCollectionEnumTest extends TestCase
+class EnumTest extends TestCase
 {
     /** @test */
     public function it_returns_illuminate_collection_storage()
@@ -23,6 +24,6 @@ class IlluminateCollectionEnumTest extends TestCase
     /** @test */
     public function it_fetches_keys()
     {
-        $this->assertEquals(array_values(EnumTest::PAYMENT_STATUS_IDS), PaymentStatusIlluminateCollectionEnum::keys()->toArray());
+        $this->assertEquals(array_values(BaseEnumTest::PAYMENT_STATUS_IDS), PaymentStatusIlluminateCollectionEnum::keys()->toArray());
     }
 }

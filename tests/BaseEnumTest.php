@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use EKvedaras\PHPEnum\Enum;
+use EKvedaras\PHPEnum\BaseEnum;
 use OutOfBoundsException;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
@@ -14,7 +14,7 @@ use Tests\Enums\PaymentStatusOptions;
  * Class EnumTest
  * @package Tests
  */
-class EnumTest extends TestCase
+class BaseEnumTest extends TestCase
 {
     public const PAYMENT_STATUS_PENDING   = 'pending';
     public const PAYMENT_STATUS_COMPLETED = 'completed';
@@ -52,7 +52,7 @@ class EnumTest extends TestCase
     /**
      * @test
      * @dataProvider enums
-     * @param Enum|PaymentStatusOptions|string $enum
+     * @param BaseEnum|PaymentStatusOptions|string $enum
      */
     public function it_fetches_enum_list(string $enum)
     {
@@ -69,7 +69,7 @@ class EnumTest extends TestCase
     /**
      * @test
      * @dataProvider enums
-     * @param Enum|PaymentStatusOptions|string $enum
+     * @param BaseEnum|PaymentStatusOptions|string $enum
      */
     public function it_fetches_option_list(string $enum)
     {
@@ -89,7 +89,7 @@ class EnumTest extends TestCase
     /**
      * @test
      * @dataProvider enums
-     * @param Enum|PaymentStatusOptions|string $enum
+     * @param BaseEnum|PaymentStatusOptions|string $enum
      */
     public function it_fetches_enum_as_json(string $enum)
     {
@@ -100,7 +100,7 @@ class EnumTest extends TestCase
     /**
      * @test
      * @dataProvider enums
-     * @param Enum|PaymentStatusOptions|string $enum
+     * @param BaseEnum|PaymentStatusOptions|string $enum
      */
     public function it_fetches_options_as_json(string $enum)
     {
@@ -111,7 +111,7 @@ class EnumTest extends TestCase
     /**
      * @test
      * @dataProvider enums
-     * @param Enum|PaymentStatusOptions|string $enum
+     * @param BaseEnum|PaymentStatusOptions|string $enum
      */
     public function it_retrieves_from_id_and_returns_correct_values(string $enum)
     {
@@ -128,7 +128,7 @@ class EnumTest extends TestCase
     /**
      * @test
      * @dataProvider enums
-     * @param Enum|PaymentStatusOptions|string $enum
+     * @param BaseEnum|PaymentStatusOptions|string $enum
      */
     public function it_retrieves_from_meta_and_returns_correct_values(string $enum)
     {
@@ -146,7 +146,7 @@ class EnumTest extends TestCase
      * @test
      * @runInSeparateProcess
      * @dataProvider enums
-     * @param Enum|PaymentStatusOptions|string $enum
+     * @param BaseEnum|PaymentStatusOptions|string $enum
      */
     public function it_retrieves_by_calling_a_method_and_returns_correct_values(string $enum)
     {
@@ -163,7 +163,7 @@ class EnumTest extends TestCase
     /**
      * @test
      * @dataProvider enums
-     * @param Enum|PaymentStatusOptions|string $enum
+     * @param BaseEnum|PaymentStatusOptions|string $enum
      */
     public function it_creates_only_one_instance_of_each_option(string $enum)
     {
@@ -179,7 +179,7 @@ class EnumTest extends TestCase
     /**
      * @test
      * @dataProvider enums
-     * @param Enum|PaymentStatusOptions|string $enum
+     * @param BaseEnum|PaymentStatusOptions|string $enum
      */
     public function it_cannot_be_serialized(string $enum)
     {
@@ -193,7 +193,7 @@ class EnumTest extends TestCase
     /**
      * @test
      * @dataProvider enums
-     * @param Enum|PaymentStatusOptions|string $enum
+     * @param BaseEnum|PaymentStatusOptions|string $enum
      */
     public function it_throws_an_exception_for_unknown_id(string $enum)
     {
@@ -208,7 +208,7 @@ class EnumTest extends TestCase
     /**
      * @test
      * @dataProvider enums
-     * @param Enum|PaymentStatusOptions|string $enum
+     * @param BaseEnum|PaymentStatusOptions|string $enum
      */
     public function it_throws_an_exception_for_unknown_meta(string $enum)
     {
@@ -223,7 +223,7 @@ class EnumTest extends TestCase
     /**
      * @test
      * @dataProvider enums
-     * @param Enum|PaymentStatusOptions|string $enum
+     * @param BaseEnum|PaymentStatusOptions|string $enum
      */
     public function it_casts_to_string_as_id(string $enum)
     {
@@ -235,7 +235,7 @@ class EnumTest extends TestCase
     /**
      * @test
      * @dataProvider enums
-     * @param Enum|PaymentStatusOptions|string $enum
+     * @param BaseEnum|PaymentStatusOptions|string $enum
      */
     public function it_can_be_json_serialized(string $enum)
     {
@@ -254,7 +254,7 @@ class EnumTest extends TestCase
     /**
      * @test
      * @dataProvider enums
-     * @param Enum|PaymentStatusOptions|string $enum
+     * @param BaseEnum|PaymentStatusOptions|string $enum
      */
     public function it_can_set_state(string $enum)
     {

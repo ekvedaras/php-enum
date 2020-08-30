@@ -2,13 +2,13 @@
 
 namespace Tests\Enums;
 
-use EKvedaras\PHPEnum\IlluminateCollectionEnum;
+use EKvedaras\PHPEnum\Illuminate\Collection\Enum;
 
 /**
  * Class PaymentStatusCollectionEnum
  * @package Tests\Enums
  */
-class PaymentStatusIlluminateCollectionEnum extends IlluminateCollectionEnum
+class PaymentStatusIlluminateCollectionEnum extends Enum
 {
     use PaymentStatusOptions;
 }
