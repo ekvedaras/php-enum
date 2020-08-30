@@ -12,6 +12,12 @@
             "role": "author"
         }
     ],
+    "keywords": [
+        "ekvedaras",
+        "php",
+        "enum",
+        "enumerable"
+    ],
     "autoload": {
         "psr-4": {
             "EKvedaras\\PHPEnum\\": "src"
