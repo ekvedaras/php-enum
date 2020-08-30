@@ -13,7 +13,7 @@
          verbose="true"
 >
     <testsuites>
-        <testsuite name="EnumerableType test suit">
+        <testsuite name="Test suit">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>
