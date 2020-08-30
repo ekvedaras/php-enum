@@ -15,7 +15,7 @@ use RuntimeException;
 abstract class BaseEnum implements JsonSerializable
 {
     /** @var iterable|iterable[] */
-    public static $cache;
+    protected static $cache;
 
     /** @var int|string */
     protected $id;
