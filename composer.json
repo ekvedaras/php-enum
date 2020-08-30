@@ -1,9 +1,14 @@
 {
     "name": "ekvedaras/php-enum",
     "description": "PHP enum implementation",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "license": "MIT",
+    "homepage": "https://github.com/ekvedaras/php-enum",
+    "keywords": [
+        "ekvedaras",
+        "php",
+        "enum",
+        "enumerable"
+    ],
     "authors": [
         {
             "name": "Ernestas Kvedaras",
@@ -11,12 +16,6 @@
             "homepage": "https://github.com/ekvedaras",
             "role": "author"
         }
-    ],
-    "keywords": [
-        "ekvedaras",
-        "php",
-        "enum",
-        "enumerable"
     ],
     "autoload": {
         "psr-4": {
@@ -39,5 +38,13 @@
     "suggest": {
         "illuminate/collections": "*",
         "illuminate/support": "*"
-    }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
