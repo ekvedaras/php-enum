@@ -390,9 +390,12 @@ class Payment
 }
 ```
 
+## Related packages
+
+* [ekvedaras/laravel-enum](https://packagist.org/packages/ekvedaras/laravel-enum)
+
 ## Coming soon
 
-* Laravel package to integrate this with automated casting in model values
 * More implementations of collections in other frameworks
 
 ## Changelog
