@@ -95,6 +95,12 @@ abstract class BaseEnum implements JsonSerializable
     abstract public static function keys();
 
     /**
+     * @param string $glue
+     * @return string
+     */
+    abstract public static function keyString(string $glue = ',');
+
+    /**
      * Get enum options with full data as JSON
      *
      * @return string

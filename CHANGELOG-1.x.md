@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2020-08-31
+### Added
+- `keyString` static method to fetch as string, glued by comma by default
+
 ## [1.0.1] - 2020-08-30
 ### Fixed
 - Make `BaseEnum::$cache` protected as it was left public.
@@ -14,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Array and illuminate collection implementations
 
-[Unreleased]:  https://github.com/ekvedaras/php-enum/compare/v1.0.1...HEAD
+[Unreleased]:  https://github.com/ekvedaras/php-enum/compare/v1.1.0...HEAD
+[1.1.0]:  https://github.com/ekvedaras/php-enum/compare/v1.0.1...v1.1.0
 [1.0.1]:  https://github.com/ekvedaras/php-enum/compare/v1.0.0...v1.0.1
 [1.0.0]:  https://github.com/ekvedaras/php-enum/releases/tag/v1.0.0

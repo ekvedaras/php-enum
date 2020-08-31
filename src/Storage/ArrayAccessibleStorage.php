@@ -67,6 +67,14 @@ trait ArrayAccessibleStorage
     /**
      * @inheritDoc
      */
+    public static function keyString(string $glue = ',')
+    {
+        return implode($glue, static::keys());
+    }
+
+    /**
+     * @inheritDoc
+     */
     public static function json(): string
     {
         return (string)json_encode(static::enum());

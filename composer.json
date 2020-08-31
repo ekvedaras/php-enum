@@ -40,7 +40,8 @@
         "illuminate/support": "*"
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "phpunit",
+        "cover": "phpunit --coverage-html=build"
     },
     "config": {
         "sort-packages": true

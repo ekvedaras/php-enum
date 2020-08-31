@@ -91,6 +91,24 @@ class BaseEnumTest extends TestCase
      * @dataProvider enums
      * @param BaseEnum|PaymentStatusOptions|string $enum
      */
+    public function it_fetches_key_list(string $enum)
+    {
+        $list       = $enum::keys();
+        $listString = $enum::keyString($glue = ';');
+
+        $this->assertCount(count(self::PAYMENT_STATUS_IDS), $list);
+
+        foreach (self::PAYMENT_STATUS_IDS as $key => $id) {
+            $this->assertContains($id, $list);
+            $this->assertStringContainsString((string)$id, $listString);
+        }
+    }
+
+    /**
+     * @test
+     * @dataProvider enums
+     * @param BaseEnum|PaymentStatusOptions|string $enum
+     */
     public function it_fetches_enum_as_json(string $enum)
     {
         $this->assertJson($enum::json());

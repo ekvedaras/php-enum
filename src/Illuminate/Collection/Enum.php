@@ -40,4 +40,12 @@ abstract class Enum extends BaseEnum
     {
         return static::enum()->keys();
     }
+
+    /**
+     * @inheritDoc
+     */
+    public static function keyString(string $glue = ',')
+    {
+        return static::keys()->implode($glue);
+    }
 }
