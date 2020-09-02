@@ -134,30 +134,38 @@ abstract class BaseEnum implements JsonSerializable
      * Static method which returns all available types
      *
      * @return static[]
-     * @noinspection PhpDocMissingThrowsInspection
      */
     public static function enum()
     {
         $classKey = static::getClassKey();
 
-        if (!isset(self::$cache)) {
-            self::$cache = static::getNewStorage();
+        if (!isset(static::$cache)) {
+            static::$cache = static::getNewStorage();
         }
 
-        if (!static::existsInStorage(self::$cache, $classKey)) {
-            $methods = static::getNewStorage();
-
-            /** @noinspection PhpUnhandledExceptionInspection */
-            foreach ((new ReflectionClass(get_called_class()))->getMethods(ReflectionMethod::IS_FINAL) as $method) {
-                /** @var static $enum */
-                $enum = $method->invoke(null);
-                static::putToStorage($methods, $enum->id(), $enum);
-            }
-
-            static::putToStorage(self::$cache, $classKey, $methods);
+        if (!static::existsInStorage(static::$cache, $classKey)) {
+            static::build($classKey);
         }
 
-        return static::getFromStorage(self::$cache, $classKey);
+        return static::getFromStorage(static::$cache, $classKey);
+    }
+
+    /**
+     * Build instances of enum options
+     *
+     * @param int $classKey
+     */
+    protected static function build(int $classKey)
+    {
+        $methods = static::getNewStorage();
+
+        foreach ((new ReflectionClass(static::class))->getMethods(ReflectionMethod::IS_FINAL) as $method) {
+            /** @var static $enum */
+            $enum = $method->invoke(null);
+            static::putToStorage($methods, $enum->id(), $enum);
+        }
+
+        static::putToStorage(static::$cache, $classKey, $methods);
     }
 
     /**
@@ -215,7 +223,6 @@ abstract class BaseEnum implements JsonSerializable
      * @param string|int  $id
      * @param string|null $name
      * @param null        $meta
-     * @noinspection PhpDocMissingThrowsInspection
      * @return static
      */
     protected static function get($id, string $name = null, $meta = null): self
@@ -226,19 +233,19 @@ abstract class BaseEnum implements JsonSerializable
 
         $classKey = static::getClassKey();
 
-        if (!isset(self::$cache)) {
-            self::$cache = static::getNewStorage();
+        if (!isset(static::$cache)) {
+            static::$cache = static::getNewStorage();
         }
 
-        if (!static::existsInStorage(self::$cache, $classKey)) {
-            static::putToStorage(self::$cache, $classKey, static::getNewStorage());
+        if (!static::existsInStorage(static::$cache, $classKey)) {
+            static::putToStorage(static::$cache, $classKey, static::getNewStorage());
+            static::build($classKey);
         }
 
-        $instances = static::getFromStorage(self::$cache, $classKey);
+        $instances = static::getFromStorage(static::$cache, $classKey);
 
         if (!static::existsInStorage($instances, $id)) {
-            /** @noinspection PhpUnhandledExceptionInspection */
-            $reflection = new ReflectionClass(get_called_class());
+            $reflection = new ReflectionClass(static::class);
             $instance   = $reflection->newInstanceWithoutConstructor();
 
             $refConstructor = $reflection->getConstructor();

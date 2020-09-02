@@ -54,6 +54,31 @@ class BaseEnumTest extends TestCase
      * @dataProvider enums
      * @param BaseEnum|PaymentStatusOptions|string $enum
      */
+    public function it_does_not_crash_when_calling_from_for_yet_unregistered_id(string $enum)
+    {
+        $pendingKey  = self::PAYMENT_STATUS_PENDING;
+        $completedId = self::PAYMENT_STATUS_IDS[self::PAYMENT_STATUS_COMPLETED];
+
+        $this->assertInstanceOf($enum, $enum::$pendingKey());
+        $this->assertInstanceOf($enum, $enum::from($completedId));
+    }
+
+    /**
+     * @test
+     * @dataProvider enums
+     * @runInSeparateProcess
+     * @param BaseEnum|PaymentStatusOptions|string $enum
+     */
+    public function it_does_not_crash_when_calling_enum_first(string $enum)
+    {
+        $this->assertNotEmpty($enum::enum());
+    }
+
+    /**
+     * @test
+     * @dataProvider enums
+     * @param BaseEnum|PaymentStatusOptions|string $enum
+     */
     public function it_fetches_enum_list(string $enum)
     {
         $list = $enum::enum();
