@@ -23,7 +23,11 @@ and there are `array` and illuminate `collection` implementations to choose from
 
 ## Defining enums
 
-Create enums by extending either `EKvedaras\PHPEnum\PHPArray\Enum` or `EKvedaras\PHPEnum\Illuminate\Collection\Enum`.
+Create enums by extending one of:
+
+ * `EKvedaras\PHPEnum\PHPArray\Enum`
+ * `EKvedaras\PHPEnum\Illuminate\Collection\Enum`
+ * `EKvedaras\PHPEnum\Arrayy\Enum`
 
 ```php
 <?php
