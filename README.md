@@ -390,6 +390,14 @@ class Payment
 }
 ```
 
+### Don't mix implementations
+
+Enum instances cache is stored in a static variable. Choose one implementation for your project
+and stick to it, otherwise you may unexpectedly get errors because types don't match.
+
+You may create your own project enum class and extend your chosen implementation, so if it ever needs to be
+changed it can be done in one place only (if storage APIs match).
+
 ## Related packages
 
 * [ekvedaras/laravel-enum](https://packagist.org/packages/ekvedaras/laravel-enum)

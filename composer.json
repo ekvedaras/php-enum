@@ -33,11 +33,13 @@
     },
     "require-dev": {
         "illuminate/support": "^6|^7",
-        "phpunit/phpunit": "^8.5.8"
+        "phpunit/phpunit": "^8.5.8",
+        "voku/arrayy": "^7.0"
     },
     "suggest": {
-        "illuminate/collections": "*",
-        "illuminate/support": "*"
+        "illuminate/collections": "Required for \\EKvedaras\\PHPEnum\\Illuminate\\Collection\\Enum implementation. Provides standalone Laravel collections",
+        "illuminate/support": "Required for \\EKvedaras\\PHPEnum\\Illuminate\\Collection\\Enum implementation. Use if illuminate/collections can't be installed due to version contstraints",
+        "voku/arrayy": "Required for \\EKvedaras\\PHPEnum\\Arrayy\\Enum implementation"
     },
     "scripts": {
         "test": "phpunit",

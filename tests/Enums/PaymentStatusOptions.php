@@ -53,4 +53,9 @@ trait PaymentStatusOptions
     public function notPartOfEnum()
     {
     }
+
+    public static function clearCache()
+    {
+        static::$cache = null;
+    }
 }

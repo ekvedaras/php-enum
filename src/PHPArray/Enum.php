@@ -3,7 +3,7 @@
 namespace EKvedaras\PHPEnum\PHPArray;
 
 use EKvedaras\PHPEnum\BaseEnum;
-use EKvedaras\PHPEnum\Storage\ArrayAccessibleStorage;
+use EKvedaras\PHPEnum\Storage\GenericArrayAccessibleStorage;
 
 /**
  * Class Enum
@@ -11,7 +11,7 @@ use EKvedaras\PHPEnum\Storage\ArrayAccessibleStorage;
  */
 abstract class Enum extends BaseEnum
 {
-    use ArrayAccessibleStorage;
+    use GenericArrayAccessibleStorage;
 
     /**
      * @inheritDoc

@@ -3,17 +3,19 @@
 namespace EKvedaras\PHPEnum\Illuminate\Collection;
 
 use EKvedaras\PHPEnum\BaseEnum;
-use EKvedaras\PHPEnum\Storage\ArrayAccessibleStorage;
+use EKvedaras\PHPEnum\Storage\GenericArrayAccessibleObjectStorage;
 use Illuminate\Support\Collection;
 
 /**
  * Class Enum
  * @package EKvedaras\PHPEnum\Illuminate\Collection
  * @method static Collection|static[] enum()
+ * @method static Collection|string[] options()
+ * @method static Collection|int[]|string[] keys()
  */
 abstract class Enum extends BaseEnum
 {
-    use ArrayAccessibleStorage;
+    use GenericArrayAccessibleObjectStorage;
 
     /**
      * @return Collection
@@ -21,31 +23,5 @@ abstract class Enum extends BaseEnum
     protected static function getNewStorage()
     {
         return new Collection();
-    }
-
-    /**
-     * @return Collection|string[]
-     */
-    public static function options()
-    {
-        return static::enum()->map(function (self $enum) {
-            return $enum->name();
-        });
-    }
-
-    /**
-     * @return Collection|int[]|string[]
-     */
-    public static function keys()
-    {
-        return static::enum()->keys();
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public static function keyString(string $glue = ',')
-    {
-        return static::keys()->implode($glue);
     }
 }

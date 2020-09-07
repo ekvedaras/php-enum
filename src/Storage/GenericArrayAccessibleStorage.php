@@ -3,10 +3,10 @@
 namespace EKvedaras\PHPEnum\Storage;
 
 /**
- * Trait ArrayAccessibleStorage
- * @package EKvedaras\PHPEnum
+ * Trait GenericArrayAccessibleStorage
+ * @package EKvedaras\PHPEnum\Storage
  */
-trait ArrayAccessibleStorage
+trait GenericArrayAccessibleStorage
 {
     /**
      * @inheritDoc

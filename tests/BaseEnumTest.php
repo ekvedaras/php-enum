@@ -4,9 +4,9 @@ namespace Tests;
 
 use EKvedaras\PHPEnum\BaseEnum;
 use OutOfBoundsException;
-use PHPUnit\Framework\TestCase;
 use RuntimeException;
 use Tests\Enums\PaymentStatusArrayEnum;
+use Tests\Enums\PaymentStatusArrayyEnum;
 use Tests\Enums\PaymentStatusIlluminateCollectionEnum;
 use Tests\Enums\PaymentStatusOptions;
 
@@ -46,6 +46,7 @@ class BaseEnumTest extends TestCase
         return [
             'array-storage'      => [PaymentStatusArrayEnum::class],
             'collection-storage' => [PaymentStatusIlluminateCollectionEnum::class],
+            'arrayy'             => [PaymentStatusArrayyEnum::class],
         ];
     }
 

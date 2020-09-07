@@ -3,9 +3,9 @@
 namespace Tests\Illuminate\Collection;
 
 use Illuminate\Support\Collection;
-use PHPUnit\Framework\TestCase;
 use Tests\BaseEnumTest;
 use Tests\Enums\PaymentStatusIlluminateCollectionEnum;
+use Tests\TestCase;
 
 /**
  * Class EnumTest

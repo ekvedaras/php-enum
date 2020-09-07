@@ -2,8 +2,8 @@
 
 namespace Tests\PHPArray;
 
-use PHPUnit\Framework\TestCase;
 use Tests\Enums\PaymentStatusArrayEnum;
+use Tests\TestCase;
 
 /**
  * Class EnumTest
