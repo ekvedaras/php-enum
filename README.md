@@ -10,7 +10,7 @@
 Big thanks [happy-types/enumerable-type](https://packagist.org/packages/happy-types/enumerable-type) for the original idea. Take a look if it suits your needs better.
 
 This package adds `meta` field, provides a few more methods like `options`, `keys`, `json`, etc. 
-and there are `array` and illuminate `collection` implementations to choose from. 
+and there are simple php array, `illuminate/collection` and `arrayy` collection implementations to choose from. 
 
 ## Benefits
 
