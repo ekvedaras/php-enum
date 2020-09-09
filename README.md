@@ -304,6 +304,7 @@ Meta could also be used as a more in detail description of each option that coul
 or some other object linking other classes, resources together.
 
 Furthermore, in some cases it is useful to resolve enum option from meta. That is also possible:
+
 ```php
 $method = PaymentMethod::fromMeta(StripeHandler::class);
 ```
