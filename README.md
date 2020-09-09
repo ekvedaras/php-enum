@@ -30,8 +30,6 @@ Create enums by extending one of:
  * `EKvedaras\PHPEnum\Arrayy\Enum`
 
 ```php
-<?php
-
 use EKvedaras\PHPEnum\PHPArray\Enum;
 
 class PaymentStatus extends Enum 
@@ -278,8 +276,6 @@ Meta field is intentionally left as mixed type as it could be used for various r
 For example linking enum options with a specific implementation:
 
 ```php
-<?php
-
 use EKvedaras\PHPEnum\PHPArray\Enum;
 
 class PaymentMethod extends Enum
@@ -321,8 +317,6 @@ they will not be returned in `enum` / `keys` / `options`, etc. results and won't
 to extend enums and make them more useful. For example:
 
 ```php
-<?php
-
 use EKvedaras\PHPEnum\Illuminate\Collection\Enum;
 use Illuminate\Support\Collection;
 
@@ -375,8 +369,6 @@ Calling `serialize(PaymentMethod::stripe())` will throw a `RuntimeException`.
 As a workaround it is better to store the ID instead of object itself. You still get the bonus of setters only accepting valid values.
 
 ```php
-<?php
-
 class Payment 
 {
     /** @var string */
