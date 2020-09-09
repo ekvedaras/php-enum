@@ -309,7 +309,7 @@ or some other object linking other classes, resources together.
 
 Furthermore, in some cases it is useful to resolve enum option from meta. That is also possible:
 ```php
-$method = PaymentMethod::from(StripeHandler::class);
+$method = PaymentMethod::fromMeta(StripeHandler::class);
 ```
 
 ## Things to know
