@@ -5,6 +5,8 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ekvedaras/php-enum.svg?style=flat)](https://packagist.org/packages/ekvedaras/php-enum)
 [![Total Downloads](https://img.shields.io/packagist/dt/ekvedaras/php-enum.svg?style=flat)](https://packagist.org/packages/ekvedaras/php-enum)
 
+<img src="logo.svg" width="192" height="192"/>
+
 ![Twitter Follow](https://img.shields.io/twitter/follow/ekvedaras?style=plastic)
 
 Big thanks [happy-types/enumerable-type](https://packagist.org/packages/happy-types/enumerable-type) for the original idea. Take a look if it suits your needs better.
