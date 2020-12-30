@@ -1,6 +1,7 @@
 # PHP Enum
 
 ![Tests](https://github.com/ekvedaras/php-enum/workflows/run-tests/badge.svg)
+[![Code Coverage](https://img.shields.io/codecov/c/gh/ekvedaras/php-enum/main?style=flat)](https://app.codecov.io/gh/ekvedaras/php-enum)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ekvedaras/php-enum.svg?style=flat)](https://packagist.org/packages/ekvedaras/php-enum)
 [![Total Downloads](https://img.shields.io/packagist/dt/ekvedaras/php-enum.svg?style=flat)](https://packagist.org/packages/ekvedaras/php-enum)

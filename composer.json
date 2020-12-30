@@ -45,7 +45,8 @@
     },
     "scripts": {
         "test": "phpunit",
-        "cover": "phpunit --coverage-html=build"
+        "cover": "phpunit --coverage-html=build",
+        "ci": "phpunit --coverage-clover=build/clover.xml --coverage-xml=build/coverage-xml --log-junit=build/junit.xml"
     },
     "config": {
         "sort-packages": true
