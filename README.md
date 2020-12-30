@@ -12,7 +12,7 @@
 Big thanks [happy-types/enumerable-type](https://packagist.org/packages/happy-types/enumerable-type) for the original idea. Take a look if it suits your needs better.
 
 This package adds `meta` field, provides a few more methods like `options`, `keys`, `json`, etc. 
-and there are simple php array, `illuminate/collection` and `arrayy` collection implementations to choose from. 
+and there are simple php array, `illuminate/collection`, `arrayy` and `doctrine` collection implementations to choose from. 
 
 ## Benefits
 
@@ -30,6 +30,7 @@ Create enums by extending one of:
  * `EKvedaras\PHPEnum\PHPArray\Enum`
  * `EKvedaras\PHPEnum\Illuminate\Collection\Enum`
  * `EKvedaras\PHPEnum\Arrayy\Enum`
+ * `EKvedaras\PHPEnum\Doctrine\Enum`
 
 ```php
 use EKvedaras\PHPEnum\PHPArray\Enum;
@@ -400,10 +401,6 @@ changed it can be done in one place only (if storage APIs match).
 ## Related packages
 
 * [ekvedaras/laravel-enum](https://packagist.org/packages/ekvedaras/laravel-enum)
-
-## Coming soon
-
-* More implementations of collections in other frameworks
 
 ## Changelog
 

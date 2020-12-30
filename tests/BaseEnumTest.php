@@ -7,6 +7,7 @@ use OutOfBoundsException;
 use RuntimeException;
 use Tests\Enums\PaymentStatusArrayEnum;
 use Tests\Enums\PaymentStatusArrayyEnum;
+use Tests\Enums\PaymentStatusDoctrineEnum;
 use Tests\Enums\PaymentStatusIlluminateCollectionEnum;
 use Tests\Enums\PaymentStatusOptions;
 
@@ -47,6 +48,7 @@ class BaseEnumTest extends TestCase
             'array-storage'      => [PaymentStatusArrayEnum::class],
             'collection-storage' => [PaymentStatusIlluminateCollectionEnum::class],
             'arrayy'             => [PaymentStatusArrayyEnum::class],
+            'doctrine'           => [PaymentStatusDoctrineEnum::class],
         ];
     }
 
