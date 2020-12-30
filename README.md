@@ -402,6 +402,7 @@ changed it can be done in one place only (if storage APIs match).
 ## Related packages
 
 * [ekvedaras/laravel-enum](https://packagist.org/packages/ekvedaras/laravel-enum)
+* [ekvedaras/doctrine-enum](https://packagist.org/packages/ekvedaras/doctrine-enum)
 
 ## Changelog
 
